@@ -1,0 +1,21 @@
+# Godot-specific
+.import/
+.godot/
+*.import
+*.converted
+*.translation
+*.log
+
+# Exported builds
+*.exe
+*.apk
+*.pck
+*.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*.tmp
+*.backup
