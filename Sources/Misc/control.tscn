@@ -1,0 +1,472 @@
+[gd_scene load_steps=28 format=3 uid="uid://b6b1rustnhugd"]
+
+[ext_resource type="Texture2D" uid="uid://cd5nmkn3xce4d" path="res://Resources/Textures/UI/UI-09eb.png" id="1_85sax"]
+[ext_resource type="Script" uid="uid://bsxgtjdgoa8cx" path="res://Sources/Misc/control.gd" id="1_hmq63"]
+[ext_resource type="FontFile" uid="uid://7n8sps8g1n0p" path="res://Resources/Fonts/Rajdhani/Rajdhani-Light.ttf" id="2_5nh6c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nh6c"]
+atlas = ExtResource("1_85sax")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmq63"]
+atlas = ExtResource("1_85sax")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85sax"]
+atlas = ExtResource("1_85sax")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f37mr"]
+atlas = ExtResource("1_85sax")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py4pp"]
+atlas = ExtResource("1_85sax")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ai017"]
+atlas = ExtResource("1_85sax")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ap5rb"]
+atlas = ExtResource("1_85sax")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fxrl"]
+atlas = ExtResource("1_85sax")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4fq4"]
+atlas = ExtResource("1_85sax")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r2xq"]
+atlas = ExtResource("1_85sax")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx88t"]
+atlas = ExtResource("1_85sax")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irv53"]
+atlas = ExtResource("1_85sax")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f37mr"]
+bg_color = Color(1, 1, 1, 0.5882353)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+expand_margin_left = 20.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_f37mr"]
+font = ExtResource("2_5nh6c")
+font_size = 48
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nh6c"]
+bg_color = Color(0, 0, 0, 0.32156864)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_hmq63"]
+font = ExtResource("2_5nh6c")
+font_size = 46
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85sax"]
+bg_color = Color(0, 0, 0, 0.5882353)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 50.0
+expand_margin_right = 50.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmq63"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 50.0
+expand_margin_right = 50.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5nh6c"]
+
+[sub_resource type="Animation" id="Animation_ai017"]
+resource_name = "Menu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PauseMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PauseMenu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_f37mr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Buttons:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Buttons:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PauseMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_py4pp"]
+resource_name = "close_PauseMenu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Buttons:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.5882353)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Buttons:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PauseMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PauseMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hmq63"]
+resource_name = "open_PauseMenu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Buttons:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5882353), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Buttons:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PauseMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PauseMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_py4pp"]
+_data = {
+&"Menu": SubResource("Animation_ai017"),
+&"RESET": SubResource("Animation_f37mr"),
+&"close_PauseMenu": SubResource("Animation_py4pp"),
+&"open_PauseMenu": SubResource("Animation_hmq63")
+}
+
+[node name="Control" type="Control" node_paths=PackedStringArray("Buttons", "PauseMenu")]
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hmq63")
+Buttons = NodePath("Buttons")
+PauseMenu = NodePath("PauseMenu")
+metadata/_edit_lock_ = true
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="left" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(-1068, 208)
+scale = Vector2(8.000001, 8)
+texture_normal = SubResource("AtlasTexture_5nh6c")
+texture_pressed = SubResource("AtlasTexture_hmq63")
+passby_press = true
+action = "left"
+
+[node name="right" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(-812.00006, 208)
+scale = Vector2(7.9999995, 8)
+texture_normal = SubResource("AtlasTexture_85sax")
+texture_pressed = SubResource("AtlasTexture_f37mr")
+passby_press = true
+action = "right"
+
+[node name="jump" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(852, 208)
+scale = Vector2(7.9999995, 8)
+texture_normal = SubResource("AtlasTexture_py4pp")
+texture_pressed = SubResource("AtlasTexture_ai017")
+passby_press = true
+action = "jump"
+
+[node name="dash" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(852, -48)
+scale = Vector2(7.9999995, 8)
+texture_normal = SubResource("AtlasTexture_ap5rb")
+texture_pressed = SubResource("AtlasTexture_2fxrl")
+passby_press = true
+action = "dash"
+
+[node name="attack" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(596, 208)
+scale = Vector2(7.9999995, 8)
+texture_normal = SubResource("AtlasTexture_q4fq4")
+texture_pressed = SubResource("AtlasTexture_8r2xq")
+passby_press = true
+action = "attack"
+
+[node name="Menu" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(980, -432)
+scale = Vector2(3.999996, 4)
+texture_normal = SubResource("AtlasTexture_tx88t")
+texture_pressed = SubResource("AtlasTexture_irv53")
+passby_press = true
+
+[node name="PlayerBar" type="Panel" parent="Buttons"]
+layout_mode = 0
+offset_left = -1068.0
+offset_top = -432.0
+offset_right = -620.0
+offset_bottom = -240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f37mr")
+
+[node name="LABEL" type="Label" parent="Buttons/PlayerBar"]
+layout_mode = 1
+offset_right = 213.0
+offset_bottom = 157.0
+text = "• HEALTH
+• COINS
+• BULLSHIT"
+label_settings = SubResource("LabelSettings_f37mr")
+
+[node name="PauseMenu" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -125.0
+offset_right = 250.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5nh6c")
+metadata/_edit_lock_ = true
+
+[node name="BoxContainer" type="BoxContainer" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+
+[node name="Label" type="Label" parent="PauseMenu/BoxContainer"]
+layout_mode = 2
+text = "PAUSE MENU"
+label_settings = SubResource("LabelSettings_hmq63")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control3" type="Control" parent="PauseMenu/BoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/BoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Menu" type="Button" parent="PauseMenu/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5nh6c")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_85sax")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hmq63")
+theme_override_styles/hover = SubResource("StyleBoxFlat_85sax")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_85sax")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5nh6c")
+action_mode = 0
+text = "RESUME"
+
+[node name="Control2" type="Control" parent="PauseMenu/BoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="SettingsButton" type="Button" parent="PauseMenu/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5nh6c")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_85sax")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hmq63")
+theme_override_styles/hover = SubResource("StyleBoxFlat_85sax")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_85sax")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5nh6c")
+action_mode = 0
+text = "SETTINGS"
+
+[node name="Control" type="Control" parent="PauseMenu/BoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Menubutton" type="Button" parent="PauseMenu/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5nh6c")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_85sax")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hmq63")
+theme_override_styles/hover = SubResource("StyleBoxFlat_85sax")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_85sax")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5nh6c")
+action_mode = 0
+text = "MAIN MENU"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_py4pp")
+}
+
+[node name="MenuTimer" type="Timer" parent="."]
+
+[connection signal="pressed" from="Buttons/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="PauseMenu/BoxContainer/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="PauseMenu/BoxContainer/VBoxContainer/Menubutton" to="." method="_on_menubutton_pressed"]
+[connection signal="timeout" from="MenuTimer" to="." method="_on_menu_timer_timeout"]

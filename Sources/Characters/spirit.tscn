@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bj51akjgupuwi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6pkri"]
+radius = 57.68882
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m27yy"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_lifew"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5xxh1"]
+gradient = SubResource("Gradient_lifew")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Spirit" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6pkri")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_m27yy")
+amount = 33
+texture = SubResource("GradientTexture2D_5xxh1")
+lifetime = 0.5
+gravity = Vector2(0, 0)
+angle_min = -360.0
+angle_max = 360.0
+scale_amount_max = 1.6

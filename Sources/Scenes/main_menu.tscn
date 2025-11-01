@@ -1,0 +1,539 @@
+[gd_scene load_steps=19 format=4 uid="uid://cpxanm5aah5kn"]
+
+[ext_resource type="Script" uid="uid://dv2jsaxvj7dvu" path="res://Sources/Scenes/main_menu.gd" id="1_kjfo3"]
+[ext_resource type="FontFile" uid="uid://7n8sps8g1n0p" path="res://Resources/Fonts/Rajdhani/Rajdhani-Light.ttf" id="2_kjfo3"]
+[ext_resource type="PackedScene" uid="uid://cxcikc0g4rvcf" path="res://Sources/Misc/blocks.tscn" id="3_ijr6i"]
+[ext_resource type="Texture2D" uid="uid://b08surmmaas4s" path="res://Resources/Textures/Misc/Spiderbackground-d6da.png" id="4_wtn1m"]
+[ext_resource type="Texture2D" uid="uid://85aa803lwasd" path="res://Resources/Textures/Misc/Backdrop-0356.png" id="5_nh3w2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjfo3"]
+bg_color = Color(0, 0, 0, 0.32156864)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_kjfo3"]
+font = ExtResource("2_kjfo3")
+font_size = 120
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijr6i"]
+bg_color = Color(0, 0, 0, 0.5882353)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x67gl"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nh3w2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtn1m"]
+atlas = ExtResource("4_wtn1m")
+region = Rect2(0, 160, 160, 160)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nh3w2"]
+radius = 64.0
+height = 378.91125
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0s42a"]
+atlas = ExtResource("4_wtn1m")
+region = Rect2(192, 128, 64, 96)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v8xjw"]
+radius = 42.53299
+height = 130.21097
+
+[sub_resource type="Animation" id="Animation_nh3w2"]
+resource_name = "Play"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main menu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main menu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BackgroundImg:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackgroundImg:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Blocks:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Blocks:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0s42a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main menu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main menu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BackgroundImg:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackgroundImg:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Blocks:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Blocks:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_v8xjw"]
+resource_name = "Quit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main menu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main menu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BackgroundImg:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BackgroundImg:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Blocks:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Blocks:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v8xjw"]
+_data = {
+&"Play": SubResource("Animation_nh3w2"),
+&"Quit": SubResource("Animation_v8xjw"),
+&"RESET": SubResource("Animation_0s42a")
+}
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_kjfo3")
+
+[node name="Main menu" type="Panel" parent="."]
+custom_minimum_size = Vector2(1500, 750)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -250.0
+offset_right = 500.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kjfo3")
+
+[node name="BoxContainer" type="BoxContainer" parent="Main menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+
+[node name="Label" type="Label" parent="Main menu/BoxContainer"]
+layout_mode = 2
+text = "Himartia"
+label_settings = SubResource("LabelSettings_kjfo3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Main menu/BoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main menu/BoxContainer"]
+custom_minimum_size = Vector2(500, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Play" type="Button" parent="Main menu/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kjfo3")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ijr6i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x67gl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ijr6i")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ijr6i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nh3w2")
+action_mode = 0
+text = "PLAY"
+
+[node name="Control2" type="Control" parent="Main menu/BoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Settings" type="Button" parent="Main menu/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kjfo3")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ijr6i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x67gl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ijr6i")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ijr6i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nh3w2")
+action_mode = 0
+text = "SETTINGS"
+
+[node name="Control" type="Control" parent="Main menu/BoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="Main menu/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kjfo3")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ijr6i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x67gl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ijr6i")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ijr6i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nh3w2")
+action_mode = 0
+text = "QUIT"
+
+[node name="Blocks" parent="." instance=ExtResource("3_ijr6i")]
+position = Vector2(-576, -324)
+tile_map_data = PackedByteArray("AAAAAAUAAQABAAEAAAABAAUAAQACAAEAAAACAAUAAQADAAEAAAADAAUAAQABAAEAAAAEAAUAAQACAAEAAAAFAAUAAQADAAEAAAAGAAUAAQABAAEAAAAHAAUAAQACAAEAAAAIAAUAAQABAAEAAAD//wUAAQAAAAEAAAAJAAUAAQAEAAEAAAAAAAQAAQABAAAAAAAFAAQAAQABAAAAAAAIAAQAAQACAAAAAAAGAAQAAQADAAAAAAABAAQAAQADAAAAAAAJAAYAAQAEAAIAAAAJAAcAAQAEAAIAAAAJAAgAAQAEAAIAAAAJAAkAAQAEAAIAAAAJAAoAAQAEAAIAAAAJAAsAAQAEAAIAAAD//wYAAQAAAAIAAAD//wcAAQAAAAIAAAD//wgAAQAAAAIAAAD//wkAAQAAAAIAAAD//woAAQAAAAIAAAD//wsAAQAAAAIAAAD//wwAAQAAAAMAAAAAAAwAAQABAAMAAAABAAwAAQACAAMAAAACAAwAAQADAAMAAAADAAwAAQABAAMAAAAEAAwAAQACAAMAAAAFAAwAAQADAAMAAAAGAAwAAQABAAMAAAAHAAwAAQABAAMAAAAIAAwAAQABAAMAAAAJAAwAAQAEAAMAAAABAA0AAQABAAQAAAACAA0AAQACAAQAAAADAA0AAQADAAQAAAAGAA0AAQABAAQAAAAHAA0AAQACAAQAAAABAAcAAQACAAIAAAAEAAYAAQACAAIAAAAEAAcAAQACAAIAAAAGAAoAAQACAAIAAAAHAAcAAQAGAAIAAAADAAkAAQACAAIAAAACAAcAAQAGAAIAAAABAAoAAQAGAAIAAAAFAAoAAQABAAIAAAAEAAoAAQABAAIAAAABAAYAAQAGAAIAAAAHAAoAAQAGAAIAAAABAAgAAQADAAIAAAAGAAgAAQABAAIAAAAAAAgAAQADAAIAAAAEAAsAAQADAAIAAAAFAAcAAQAFAAUAAAAMAAcAAQAAAAMAAAAMAAIAAQAAAAIAAAAMAAMAAQAAAAIAAAAMAAQAAQAAAAIAAAAMAAUAAQAAAAIAAAAMAAYAAQAAAAIAAAANAAIAAQABAAIAAAANAAMAAQABAAIAAAANAAQAAQABAAIAAAANAAUAAQABAAIAAAANAAYAAQABAAIAAAAMAAAAAQAAAAIAAAAMAAEAAQAAAAIAAAAMAP//AQAAAAEAAAANAAcAAQABAAMAAAAOAAcAAQACAAMAAAAPAAcAAQADAAMAAAAQAAcAAQABAAMAAAARAAcAAQABAAMAAAASAAcAAQACAAMAAAATAAcAAQADAAMAAAANAAAAAQABAAIAAAANAAEAAQABAAIAAAAOAAAAAQABAAIAAAAOAAEAAQABAAIAAAAOAAIAAQABAAIAAAAOAAMAAQABAAIAAAAOAAQAAQABAAIAAAAOAAUAAQABAAIAAAAOAAYAAQABAAIAAAAPAAAAAQABAAIAAAAPAAEAAQABAAIAAAAPAAIAAQABAAIAAAAPAAMAAQABAAIAAAAPAAQAAQABAAIAAAAPAAUAAQABAAIAAAAPAAYAAQABAAIAAAAQAAAAAQABAAIAAAAQAAEAAQABAAIAAAAQAAIAAQABAAIAAAAQAAMAAQABAAIAAAAQAAQAAQABAAIAAAAQAAUAAQABAAIAAAAQAAYAAQABAAIAAAARAAAAAQABAAIAAAARAAEAAQABAAIAAAARAAIAAQABAAIAAAARAAMAAQABAAIAAAARAAQAAQABAAIAAAARAAUAAQABAAIAAAARAAYAAQABAAIAAAASAAAAAQABAAIAAAASAAEAAQABAAIAAAASAAIAAQABAAIAAAASAAMAAQABAAIAAAASAAQAAQABAAIAAAASAAUAAQABAAIAAAASAAYAAQABAAIAAAATAAAAAQABAAIAAAATAAEAAQABAAIAAAATAAIAAQABAAIAAAATAAMAAQABAAIAAAATAAQAAQABAAIAAAATAAUAAQABAAIAAAATAAYAAQABAAIAAAANAP//AQABAAEAAAAOAP//AQACAAEAAAAPAP//AQADAAEAAAAQAP//AQABAAEAAAARAP//AQACAAEAAAASAP//AQABAAEAAAATAP//AQABAAEAAAANAP7/AQABAAAAAAAOAP7/AQACAAAAAAASAP7/AQACAAAAAAARAP7/AQADAAAAAAANAAgAAQABAAQAAAAOAAgAAQACAAQAAAASAAgAAQACAAQAAAARAAgAAQADAAQAAAACAAYAAQABAAIAAAADAAYAAQABAAIAAAAAAAYAAQABAAIAAAAAAAcAAQABAAIAAAADAAcAAQABAAIAAAAGAAcAAQABAAIAAAAFAAYAAQABAAIAAAAGAAYAAQABAAIAAAAHAAYAAQABAAIAAAAIAAYAAQABAAIAAAAIAAcAAQABAAIAAAAIAAgAAQABAAIAAAAAAAkAAQABAAIAAAABAAkAAQABAAIAAAACAAkAAQABAAIAAAACAAgAAQABAAIAAAAHAAgAAQABAAIAAAAHAAkAAQABAAIAAAAGAAkAAQABAAIAAAAFAAkAAQABAAIAAAAFAAgAAQABAAIAAAAEAAgAAQABAAIAAAADAAgAAQABAAIAAAAEAAkAAQABAAIAAAAIAAkAAQABAAIAAAAIAAoAAQABAAIAAAAIAAsAAQABAAIAAAAHAAsAAQABAAIAAAAGAAsAAQABAAIAAAAFAAsAAQABAAIAAAADAAoAAQABAAIAAAACAAoAAQABAAIAAAACAAsAAQABAAIAAAABAAsAAQABAAIAAAAAAAsAAQABAAIAAAAAAAoAAQABAAIAAAADAAsAAQABAAIAAAA=")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.606659, 0.606659, 0.606659, 1)
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(-576, -324)
+
+[node name="Prop" type="StaticBody2D" parent="Background"]
+position = Vector2(-47.999985, 624)
+rotation = -0.9029353
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Prop"]
+rotation = 0.38806227
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_wtn1m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Background/Prop"]
+position = Vector2(84.93683, -139.48016)
+rotation = -0.90822864
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CapsuleShape2D_nh3w2")
+
+[node name="Prop3" type="StaticBody2D" parent="Background"]
+position = Vector2(1392.0001, 480.00003)
+rotation = -1.2681801
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background/Prop3"]
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_0s42a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Prop3"]
+position = Vector2(-1.9073486e-06, -112)
+rotation = 0.24770397
+shape = SubResource("CapsuleShape2D_v8xjw")
+
+[node name="Prop5" type="StaticBody2D" parent="Background"]
+position = Vector2(1392.0001, 63.99997)
+rotation = -1.7971785
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background/Prop5"]
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_0s42a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Prop5"]
+position = Vector2(-1.9073486e-06, -112)
+rotation = 0.24770397
+shape = SubResource("CapsuleShape2D_v8xjw")
+
+[node name="BackgroundImg" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(1565, 2057)
+scale = Vector2(4, 4)
+texture = ExtResource("5_nh3w2")
+offset = Vector2(-391.25, -514.25)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_v8xjw")
+}
+
+[node name="PlayTimer" type="Timer" parent="."]
+
+[node name="QuitTimer" type="Timer" parent="."]
+
+[connection signal="pressed" from="Main menu/BoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Main menu/BoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="PlayTimer" to="." method="_on_play_timer_timeout"]
+[connection signal="timeout" from="QuitTimer" to="." method="_on_quit_timer_timeout"]
