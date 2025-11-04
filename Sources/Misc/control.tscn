@@ -360,13 +360,20 @@ offset_right = -620.0
 offset_bottom = -240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_f37mr")
 
-[node name="LABEL" type="Label" parent="Buttons/PlayerBar"]
-layout_mode = 1
-offset_right = 213.0
-offset_bottom = 157.0
-text = "• HEALTH
-• COINS
-• BULLSHIT"
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons/PlayerBar"]
+layout_mode = 0
+offset_left = -16.0
+offset_right = 448.0
+offset_bottom = 192.0
+
+[node name="Health" type="Label" parent="Buttons/PlayerBar/VBoxContainer"]
+layout_mode = 2
+text = "• HEALTH:"
+label_settings = SubResource("LabelSettings_f37mr")
+
+[node name="Idk" type="Label" parent="Buttons/PlayerBar/VBoxContainer"]
+layout_mode = 2
+text = "test"
 label_settings = SubResource("LabelSettings_f37mr")
 
 [node name="PauseMenu" type="Panel" parent="."]

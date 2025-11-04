@@ -5,6 +5,9 @@ extends Control
 
 @onready var anim = $AnimationPlayer
 var is_paused := false
+	
+func player_stats(health):
+	$Buttons/PlayerBar/VBoxContainer/Health.text = "• Health: " + str(health)
 
 func toggle_visibility(object):
 	var animation_type : String

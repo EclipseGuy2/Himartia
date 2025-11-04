@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6npgvhjl41dm"]
+[gd_scene load_steps=11 format=3 uid="uid://b6npgvhjl41dm"]
 
+[ext_resource type="Script" uid="uid://dsk757qh8ruq3" path="res://Sources/Characters/chrom.gd" id="1_71keg"]
 [ext_resource type="Texture2D" uid="uid://bf6et4q425r43" path="res://Resources/Textures/Characters/Chrom-209e.png" id="1_rei73"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_71keg"]
-radius = 48.0
-height = 128.0
+radius = 72.0
+height = 144.0
 
 [sub_resource type="Animation" id="Animation_n7wo6"]
 resource_name = "Attack"
@@ -156,9 +157,14 @@ _data = {
 &"Run": SubResource("Animation_816pc")
 }
 
-[node name="Chrom" type="CharacterBody2D"]
-collision_layer = 4
-collision_mask = 4
+[sub_resource type="CircleShape2D" id="CircleShape2D_71keg"]
+radius = 73.756355
+
+[node name="Chrom" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 3
+collision_mask = 3
+input_pickable = true
+script = ExtResource("1_71keg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_71keg")
@@ -173,3 +179,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_816pc")
 }
 autoplay = "Idle"
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_71keg")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
